@@ -1,0 +1,169 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl259\slmult0\qc\lang9\b\f0\fs28 Project Development Phase\fs24\par
+\par
+\fs22\par
+\trowd\trgaph108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx4508\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx9606\pard\intbl\sl240\slmult1\b0 Date\cell\f1 03 October 2026\f0\cell\row\trowd\trgaph108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx4508\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx9606\pard\intbl\sl240\slmult1 Team ID\cell\cf1\f1 SWTID-2026-2554\cf0\f0\cell\row\trowd\trgaph108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx4508\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx9606\pard\intbl\sl240\slmult1 Project Name\cell\f1 The Customer Support Ticket Priority Prediction and Automated Assignment System using Agentforce\f0\cell\row\trowd\trgaph108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx4508\clcfpat1\clcbpat2\clbrdrl\brdrw8\brdrs\brdrcf1\clbrdrt\brdrw8\brdrs\brdrcf1\clbrdrr\brdrw8\brdrs\brdrcf1\clbrdrb\brdrw8\brdrs\brdrcf1 \cellx9606\pard\intbl\sl240\slmult1 Maximum Marks\cell\cell\row\pard\sa200\sl276\slmult1\b\fs28\par
+Project Development\b0\fs22\par
+The development of the Customer Support Ticket Priority Prediction and Automated Assignment System using Agentforce is carried out on the Salesforce platform. The main objective of the development process is to automate support-ticket analysis, priority prediction, task creation, agent assignment, and SLA risk identification.\par
+\b\fs24 1. Salesforce Environment Setup\b0\fs22\par
+The project is developed using a Salesforce Developer Org. The Salesforce environment is configured with the required users, permissions, objects, fields, Flow, and Agentforce components.\par
+The development environment provides the required platform for creating the custom support-ticket object and implementing automation. Appropriate permissions are provided to administrators and support users so that they can access the required customer and ticket information.\par
+\b\fs24 2. Custom Object Development\b0\fs22\par
+A custom object named Support Ticket Intelligence is created to store customer support information.\par
+\par
+API Name: Support_Ticket_Intelligence__c\par
+\par
+The object contains important fields such as:\par
+\par
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Ticket Number\par
+{\pntext\f2\'B7\tab}Customer / Account\par
+{\pntext\f2\'B7\tab}Contact\par
+{\pntext\f2\'B7\tab}Issue Type\par
+{\pntext\f2\'B7\tab}Description\par
+{\pntext\f2\'B7\tab}Priority Level\par
+{\pntext\f2\'B7\tab}Status\par
+{\pntext\f2\'B7\tab}Created Date\par
+{\pntext\f2\'B7\tab}Assigned To\par
+{\pntext\f2\'B7\tab}SLA Breach Risk\par
+{\pntext\f2\'B7\tab}Resolution Time\par
+\pard\sa200\sl276\slmult1 The custom object allows support-ticket information to be stored in a structured manner and provides relationships with standard Salesforce objects such as Account, Contact, and User.\par
+\pard\sa200\sl276\slmult1\b\fs24 3. Data Model Development\b0\fs22\par
+The system uses Salesforce standard and custom objects to maintain relationships between customer and ticket information.\par
+Account\par
+   \u9474?\par
+   \u9500?\u9472?\u9472? Contact\par
+   \u9474?\par
+   \u9492?\u9472?\u9472? Support Ticket Intelligence\par
+              \u9474?\par
+              \u9500?\u9472?\u9472? Assigned User\par
+              \u9492?\u9472?\u9472? Task\par
+\par
+The Account represents the customer organization, while Contact stores the individual customer information. The Support Ticket Intelligence object stores the actual support issue. The User object identifies the assigned support agent, and Task records are created for follow-up activities.\par
+\b\fs24\par
+4. Ticket Description Analysis\b0\fs22\par
+The ticket description is analyzed to identify the urgency of the customer issue. The system uses configured keywords and conditions to classify tickets.\par
+\b For example:\b0\par
+\b Condition\b0\tab                                              \b Priority\b0\par
+urgent, not working, failure\tab                  High\par
+issue, slow, delay\tab                                   Medium\par
+No matching condition\tab                                    Low\par
+\par
+This provides a simple and consistent method for initial priority classification.\par
+\b\fs24\par
+5. Auto-Launched Flow Development\b0\fs22\par
+An Auto-Launched Flow is developed to automate the backend processing.\par
+The Flow receives the Account Name as an input and retrieves the latest support ticket associated with that Account.\par
+The major Flow steps are:\par
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Get Account.\par
+{\pntext\f2\'B7\tab}Store Account ID.\par
+{\pntext\f2\'B7\tab}Get the latest Support Ticket.\par
+{\pntext\f2\'B7\tab}Store Ticket ID.\par
+{\pntext\f2\'B7\tab}Analyze the ticket description.\par
+{\pntext\f2\'B7\tab}Determine ticket priority.\par
+{\pntext\f2\'B7\tab}Check whether the ticket is High priority.\par
+{\pntext\f2\'B7\tab}Create a Task for High-priority tickets.\par
+{\pntext\f2\'B7\tab}Assign the appropriate support level.\par
+{\pntext\f2\'B7\tab}Check SLA risk.\par
+{\pntext\f2\'B7\tab}Generate the final action message.\par
+{\pntext\f2\'B7\tab}Return the output to Agentforce.\par
+\pard\sa200\sl276\slmult1\par
+\b\fs24 6. Priority Prediction\b0\fs22\par
+The Flow Decision element is used to determine whether the ticket is High, Medium, or Low priority.\par
+High-priority tickets are treated as urgent cases. Medium-priority tickets are handled through normal support processing, while Low-priority tickets are queued for regular processing.\par
+This automation reduces the need for support agents to manually review every ticket for basic priority classification.\par
+\b\fs24\par
+7. Automated Task Creation\b0\fs22\par
+When a ticket is classified as High priority, the Flow automatically creates a Salesforce Task.\par
+\b Example:\b0\par
+\par
+Subject: Urgent Ticket Handling\par
+Priority: High\par
+Status: Not Started\par
+Related Record: Support Ticket\par
+This ensures that urgent tickets generate an immediate follow-up activity.\par
+\b\fs24\par
+8. Automated Assignment\b0\fs22\par
+The system assigns high-priority tickets to an appropriate support level. For example, a High-priority ticket can be assigned to a Senior Support Agent.\par
+This helps ensure that urgent issues are routed to the appropriate support resource without requiring manual assignment.\par
+\b\fs24\par
+9. SLA Risk Checking\b0\fs22\par
+The solution includes an SLA risk-checking step for unresolved tickets. Older tickets can be evaluated based on their creation date and configured SLA conditions.\par
+If a ticket approaches its SLA limit, the system can identify it as an SLA-risk ticket and include the information in the final response.\par
+\b\fs24\par
+10. Agentforce Development\b0\fs22\par
+Agentforce is configured as the conversational AI layer of the application.\par
+A subagent named:\par
+Support Ticket Priority Analysis is created to handle customer support-ticket analysis.\par
+The Agentforce subagent can:\par
+\pard{\pntext\f0 a.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcltr{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Ask for the Account Name.\par
+{\pntext\f0 b.\tab}Retrieve the latest support ticket.\par
+{\pntext\f0 c.\tab}Analyze the ticket description.\par
+{\pntext\f0 d.\tab}Determine ticket priority.\par
+{\pntext\f0 e.\tab}Trigger the backend Flow.\par
+{\pntext\f0 f.\tab}Identify the assigned support level.\par
+{\pntext\f0 g.\tab}Return the final action message.\par
+\pard\sa200\sl276\slmult1\par
+\b\fs24 11. Agentforce and Flow Integration\b0\fs22\par
+Agentforce does not directly perform the backend record-processing activities. Instead, it invokes the configured Auto-Launched Flow.\par
+The overall interaction is:\par
+User\par
+ \u8595?\par
+Agentforce\par
+ \u8595?\par
+Support Ticket Priority Analysis\par
+ \u8595?\par
+Auto-Launched Flow\par
+ \u8595?\par
+Get Account\par
+ \u8595?\par
+Get Latest Ticket\par
+ \u8595?\par
+Analyze Description\par
+ \u8595?\par
+Priority Decision\par
+ \u8595?\par
+Task / Assignment / SLA Check\par
+ \u8595?\par
+Final Output\par
+ \u8595?\par
+Agentforce Response\par
+\par
+This separation makes the solution easier to maintain because conversational logic is handled by Agentforce while backend processing is handled by Salesforce Flow.\par
+\b\fs24\par
+12. Conversational Response\par
+\b0\fs22 After the Flow completes its processing, the output variables are returned to Agentforce.\par
+\par
+The response can include:\par
+\par
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Ticket ID\par
+{\pntext\f2\'B7\tab}Priority Level\par
+{\pntext\f2\'B7\tab}Assigned Agent\par
+{\pntext\f2\'B7\tab}Account ID\par
+{\pntext\f2\'B7\tab}Action Message\par
+{\pntext\f2\'B7\tab}SLA Risk information\par
+\pard\sa200\sl276\slmult1\b For example:\b0\par
+High priority ticket detected. The ticket has been assigned for urgent handling and a follow-up task has been created.\par
+\par
+This provides support agents with a clear and understandable result.\par
+\b\fs24\par
+13. Testing and Validation\par
+\b0\fs22 The developed solution is tested using different ticket descriptions to verify the priority classification and automation.\par
+\b Test Case\b0\tab          \b Ticket Description\b0\tab                                        \b Expected Result\b0\par
+TC-01     System failure and urgent issue\tab                                      High Priority + Task Creation\par
+TC-02\tab Application is slow\tab                                                      Medium Priority\par
+TC-03\tab General information request\tab                                       Low Priority\par
+TC-04\tab Urgent issue with Account\tab                                  High Priority + Agent Assignment\par
+TC-05\tab Older unresolved ticket\tab                                                         SLA Risk identified\par
+\par
+Testing ensures that the Flow, Agentforce subagent, priority logic, task creation, and assignment work according to the configured requirements.\par
+\b\fs24 14. Final Development Outcome\b0\fs22\par
+The completed system provides an automated support-ticket workflow where Agentforce analyzes customer issues, Salesforce Flow determines priority, creates tasks, assigns support agents, checks SLA risk, and returns the final result conversationally.\par
+The solution reduces manual processing, improves consistency in ticket handling, supports faster response to critical issues, and provides a scalable foundation for future enhancements such as advanced AI-based classification, dashboards, notifications, and additional Agentforce actions.\par
+}
+ 
